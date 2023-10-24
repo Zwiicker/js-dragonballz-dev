@@ -1,0 +1,150 @@
+@font-face {
+  font-family: externalFont;
+  src: url("../img/Saiyan-Sans.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #000;
+  cursor: url('../img/cursor/cursor.png'), default;
+}
+
+ul {
+  list-style: none;
+}
+
+::webkit-scrollbar, ::moz-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+
+
+.characters::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(-233deg, #000 25%, rgba(0, 0, 0, 0) 65%) no-repeat;
+  min-height: 100vh;
+  width: 80vw;
+}
+
+.characters .character {
+  display: none;
+  height: 100vh;
+  overflow-y: auto
+}
+.characters .character img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(120%) saturate(120%);
+}
+.characters .character .content {
+  position: absolute;
+  top: 0;
+  left: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  min-height: 100vh;
+  max-width: 38rem;
+  color: #fff;
+  z-index: 1;
+}
+.characters .character .content .name-character {
+  font-family: externalFont;
+  font-size: 4.8rem;
+  font-weight: 400;
+}
+.characters .character .content .logo {
+  background-image: url("../img/dragonballz.png");
+  background-size: cover;
+  height: 6.25rem;
+  width: 14.375rem;
+  margin-bottom: 1.25rem;
+}
+.characters .character .content .description {
+  font-family: "Rubik", sans-serif;
+  line-height: 1.5;
+  font-size: 1.6rem;
+}
+.characters .character.selected {
+  display: block;
+}
+
+.buttons {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  min-height: 100vh;
+  height: 100vh; 
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.3rem;
+  padding-block: 3rem;
+  overflow-y: auto
+}
+.buttons .button.selected {
+  transform: scale(1.2);
+  box-shadow: 0 0 10px #d9d9d9;
+}
+.buttons .button {
+  border: none;
+  background: #000;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.buttons .button img {
+  border-radius: 50%;
+  width: 90px;
+  height: 86px;
+}
+
+/* Cursores Personalizados */
+.buttons .button.selected {
+  cursor: url('../img/cursor/gokuicon.png'), auto;
+
+}
+.buttons .button.vegeta {
+  cursor: url('../img/cursor/vegetaicon.png'), auto;
+
+}
+.buttons .button.piccolo {
+  cursor: url('../img/cursor/piccoloicon.png'), auto;
+
+}
+.buttons .button.kui {
+  cursor: url('../img/cursor/kuriicon.png'), auto;
+
+}
+.buttons .button.freeza {
+  cursor: url('../img/cursor/iconfreeza.png'), auto;
+
+}
+.buttons .button.cell {
+  cursor: url('../img/cursor/cellicon.png'), auto;
+
+}
+.buttons .button.boo {
+  cursor: url('../img/cursor/majinicon.png'), auto;
+
+}
