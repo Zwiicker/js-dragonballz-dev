@@ -1,6 +1,11 @@
-<div align="center"><img align="" width="150px" src="/logo.jpg">
+<br />
+
+<div align="center">
+  <kbd>
+    <img align="" width="150px" src="/logo.jpg">
+  </kbd>
   
- # Dragon Ball Z
+<br />
 
 <br /><br />
 Application developed during [Dev em Dobro](https://devemdobro.com/)'s "Semana do Zero ao Programador Contratado". <br /><br />
