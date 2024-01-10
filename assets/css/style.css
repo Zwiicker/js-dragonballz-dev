@@ -30,7 +30,9 @@ ul {
   height: 0;
 }
 
-
+.buttons .none {
+  display: none;
+}
 
 .characters::after {
   content: "";
@@ -101,7 +103,6 @@ ul {
   justify-content: center;
   gap: 1.3rem;
   padding-block: 3rem;
-  overflow-y: auto
 }
 .buttons .button.selected {
   transform: scale(1.2);
@@ -147,4 +148,39 @@ ul {
 .buttons .button.boo {
   cursor: url('../img/cursor/majinicon.png'), auto;
 
+}
+
+
+
+/* Seção para estilos responsivos em dispositivos móveis */
+@media only screen and (max-width: 480px) {
+  .characters .character .content {
+    width: 50%;
+    left: 5%;
+  }
+
+  .characters .character .content .description {
+    font-size: 1.3rem;  
+    line-height: 1.4;
+    text-align: justify; /* Alinha o texto à esquerda para evitar muitos espaços */
+
+  }
+  
+  .buttons {
+    width: 35%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .buttons .button {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .buttons .button img {
+    width: 97%;
+    height: 97%;
+  }
 }
